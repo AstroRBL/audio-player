@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+</head>
+
+<body>
+    <div class="music" id="musicPlayer" style="display: none;">
+        <div class="music-img">
+            <img src="images/play-button-arrowhead.png" id="playButton">
+        </div>
+        <div class="music-title">
+            <h1 id="music">Music Title</h1>
+            <h4 id="artist">Artist Name</h4>
+        </div>
+    </div>
+    <div class="add">
+        <button id="openAdd"><img src="images/add.png"></button>
+    </div>
+    <div class="add-music" style="display: none;">
+        <h1>Add Music</h1>
+        <label for="file-upload" class="custom-file-upload">
+            <img src="images/cloud-computing.png"> <i class="fa fa-cloud-upload"></i> Choose an audio file to upload.
+        </label>
+        <input type="file" id="file-upload"
+            accept=".mp3, .wav, .flac, .aac, .ogg, .wma, .aiff, .m4a, .opus, .ac3, .dsf, .dff, .ape, .wv">
+        <button id="closeAdd"><img src="images/close (2).png"></button>
+    </div>
+    <div class="music-info" style="display: none;">
+        <h1>Add the Music's Details</h1>
+        <button id="closeMusicInfo"><img src="images/close (2).png"></button>
+        <input id="musicInput" type="text" placeholder="Type in the Songs name...">
+        <input id="artistTitle" type="text" placeholder="Type in the Artists Name...">
+        <button id="addSong">Add</button>
+    </div>
+    <audio controls id="audio-player" style="display: none;" autoplay="false">
+        <source src="#" type="audio/mpeg" >
+        Your browser does not support the audio element.
+    </audio>
+    <div class="bigplayer" style="display: block;">
+        <button><img src="images/left-arrow.png" id="bigplayerClose"></button>
+        <img src="images/music-place.png" id="musicPlaceHolder">
+        <div class="music-progress">
+            <input type="range" id="musicSlider" min="0" max="100" value="0" step="0.1">
+        </div>
+        <div class="mediaPlayers">
+            <img src="images/previous.png" id="prevButton">
+            <img src="images/play-button-arrowhead.png" id="playButton">
+            <img src="images/previous (1).png" id="nextButton">   
+        </div>
+        <h1 id="music2">Music Title</h1>
+        <h4 id="artist2">Artist Name</h4>
+    </div>
+    <div class="music-players-container">
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
